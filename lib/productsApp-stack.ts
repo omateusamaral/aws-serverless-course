@@ -11,6 +11,7 @@ export class ProductsAppStack extends cdk.Stack {
       this,
       "ProductsFetchFunction",
       {
+        runtime: lambda.Runtime.NODEJS_16_X,
         functionName: "ProductsFetchFunction",
         entry: "lambda/products/productsFetchFunction.ts",
         handler: "handler",
